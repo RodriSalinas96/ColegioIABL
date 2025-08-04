@@ -6,8 +6,11 @@
 html, body{
     overflow-x: hidden;
     width: 100%;
-    background-color: grey;
+    height: 100%;
+    margin: 0;
+    background-color: whitesmoke;
 }
+
 main {
   min-height: 60vh;
 }
