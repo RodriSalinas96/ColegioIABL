@@ -22,7 +22,7 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
-  background-color: #f4f4f4;
+  background-color: #ffffff;
   color: #212529;
 }
 
@@ -37,7 +37,7 @@ main {
 }
 
 .fixed-col {
-  background-color: #f8f9fa;
+  background-color: #f4f4f4;
   min-height: 80vh;
   padding: 1rem;
 }
