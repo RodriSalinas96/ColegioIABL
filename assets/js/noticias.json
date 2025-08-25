@@ -1,0 +1,8 @@
+[
+  {
+    "titulo": "Prueba de noticia",
+    "fecha": "2025-08-22",
+    "descripcion": "Si ves esto en pantalla, el JSON está funcionando bien.",
+    "imagen": "img/noticia1.jpg"
+  }
+]
