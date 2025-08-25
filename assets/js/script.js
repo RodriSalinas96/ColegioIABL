@@ -37,24 +37,20 @@ form.addEventListener('submit', async function (event) {
 
 // Scrip para la seccion de noticias actualizables
 
-fetch("/assets/js/noticias.json")
+fetch('assets/js/noticias.json')
   .then(response => response.json())
-  .then(data => {
-    let contenedor = document.getElementById("noticias");
-    data.forEach(noticia => {
-      let card = `
-        <div class="col-md-4 mb-4">
-          <div class="card h-100 shadow-sm">
-            <img src="${noticia.imagen}" class="card-img-top" alt="${noticia.titulo}">
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">${noticia.titulo}</h5>
-              <p class="text-muted"><small>${noticia.fecha}</small></p>
-              <p class="card-text">${noticia.descripcion}</p>
-            </div>
-          </div>
+  .then(noticias => {
+    let contenedor = document.getElementById('noticias');
+    contenedor.innerHTML = "";
+
+    noticias.forEach(noticia => {
+      contenedor.innerHTML += `
+        <div class="noticia">
+          <h3>${noticia.titulo}</h3>
+          <p>${noticia.descripcion}</p>
+          <img src="${noticia.imagen}" alt="${noticia.titulo}" width="200">
         </div>
       `;
-      contenedor.innerHTML += card;
     });
   })
-  .catch(error => console.error("Error cargando noticias:", error));
+  .catch(error => console.error('Error cargando noticias:', error));

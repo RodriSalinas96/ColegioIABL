@@ -1,8 +1,12 @@
 [
   {
-    "titulo": "Prueba de noticia",
-    "fecha": "2025-08-22",
-    "descripcion": "Si ves esto en pantalla, el JSON está funcionando bien.",
-    "imagen": "img/noticia1.jpg"
+    "titulo": "Inicio de Clases 2025",
+    "descripcion": "El año escolar comenzó con una ceremonia de bienvenida para todos los estudiantes.",
+    "imagen": "assets/img/noticia1.jpg"
+  },
+  {
+    "titulo": "Nuevo Laboratorio de Ciencias",
+    "descripcion": "Se inauguró un moderno laboratorio de ciencias totalmente equipado.",
+    "imagen": "assets/img/noticia2.jpg"
   }
 ]
