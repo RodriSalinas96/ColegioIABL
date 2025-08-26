@@ -83,16 +83,46 @@ footer a {
     color: #0dcaf0; /* celeste Bootstrap */
     text-decoration: underline;
   }
-  .noticia {
-    background: #fff;
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-   }
-  .noticia img { 
-    max-width: 300px;
-    display: block; 
-    margin-top: 10px; 
-    border-radius: 6px;
-   }
+.noticia {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+.noticia:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+.noticia img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+#noticias {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+.contenido {
+  padding: 15px;
+}
+
+.contenido h2 {
+  margin: 0 0 10px;
+  font-size: 1.3em;
+  color: #1a5276;
+}
+
+.contenido small {
+  display: block;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.contenido p {
+  font-size: 0.95em;
+  line-height: 1.4em;
+}

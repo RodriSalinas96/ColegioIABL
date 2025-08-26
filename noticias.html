@@ -106,7 +106,7 @@
               data-href="https://www.facebook.com/colegioindustrialabl/" 
               data-tabs="timeline"
               data-width="350"
-              data-height="500"
+              data-height="300"
               data-small-header="false"
               data-adapt-container-width="true"
               data-hide-cover="false"
@@ -158,21 +158,28 @@
   <script async defer crossorigin="anonymous" 
           src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v15.0">
   </script>
+  
 <!-- Script de JSON-->
   <script>
-    // Agregamos un número único con Date.now() para evitar cache
     fetch('assets/js/noticias.json?v=' + Date.now())
       .then(response => response.json())
       .then(noticias => {
         let contenedor = document.getElementById('noticias');
         contenedor.innerHTML = "";
 
-        noticias.forEach(noticia => {
+        // Ordenar noticias por fecha (más nuevas primero)
+        noticias.sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
+
+        noticias.forEach((noticia, index) => {
           contenedor.innerHTML += `
             <div class="noticia">
-              <h2>${noticia.titulo}</h2>
-              <p>${noticia.descripcion}</p>
               <img src="${noticia.imagen}" alt="${noticia.titulo}">
+              <div class="contenido">
+                <h2>${noticia.titulo}</h2>
+                <small>${new Date(noticia.fecha).toLocaleDateString('es-CL')}</small>
+                <p>${noticia.descripcion}</p>
+                <a href="plantilla_noticia.html?id=${index}" class="leer-mas">Leer más</a>
+              </div>
             </div>
           `;
         });
@@ -182,7 +189,6 @@
         document.getElementById('noticias').innerText = "No se pudieron cargar las noticias.";
       });
   </script>
-
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 

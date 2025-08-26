@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Detalle de la Noticia</title>
+<link rel="stylesheet" href="assets/css/estilos.css">
+<style>
+.detalle {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+.detalle img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    }
+</style>
+</head>
+<body>
+<div class="detalle" id="detalle">Cargando noticia...</div>
+
+<script>
+    // Obtener el id desde la URL
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+
+    fetch('assets/js/noticias.json?v=' + Date.now())
+    .then(response => response.json())
+    .then(noticias => {
+        const noticia = noticias[id];
+        if (noticia) {
+        document.getElementById('detalle').innerHTML = `
+            <h1>${noticia.titulo}</h1>
+            <small>${new Date(noticia.fecha).toLocaleDateString('es-CL')}</small>
+            <img src="${noticia.imagen}" alt="${noticia.titulo}">
+            <p>${noticia.contenido}</p>
+            <br>
+            <a href="noticias.html">⬅ Volver a noticias</a>
+        `;
+        } else {
+        document.getElementById('detalle').innerText = "Noticia no encontrada.";
+        }
+    })
+    .catch(error => {
+        console.error('Error cargando noticia:', error);
+        document.getElementById('detalle').innerText = "No se pudo cargar la noticia.";
+    });
+</script>
+
+</body>
+</html>
