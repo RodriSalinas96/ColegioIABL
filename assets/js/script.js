@@ -54,3 +54,9 @@ fetch('assets/js/noticias.json')
     });
   })
   .catch(error => console.error('Error cargando noticias:', error));
+
+// Script para carrusel de imagenes
+
+import { Carousel, initMDB } from "mdb-ui-kit";
+
+initMDB({ Carousel });
