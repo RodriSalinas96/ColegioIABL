@@ -64,7 +64,7 @@ initMDB({ Carousel });
 // Script para NavBar unificado
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    fetch("../../assets/js/script.js")
+    fetch("../navbar.html")
       .then(response => {
         if (!response.ok) throw new Error("No se pudo cargar el navbar");
         return response.text();
