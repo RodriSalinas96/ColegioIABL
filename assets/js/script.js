@@ -62,17 +62,17 @@ import { Carousel, initMDB } from "mdb-ui-kit";
 initMDB({ Carousel });
 
 // Script para NavBar unificado
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    fetch("../navbar.html")
-      .then(response => {
-        if (!response.ok) throw new Error("No se pudo cargar el navbar");
-        return response.text();
-      })
-      .then(data => {
-        document.getElementById("navbar-container").innerHTML = data;
-      })
-      .catch(error => console.error(error));
-  });
-</script>
+document.addEventListener("DOMContentLoaded", () => {
+  fetch("navbar.html")
+    .then(response => {
+      if (!response.ok) throw new Error("No se pudo cargar el navbar");
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById("navbar-container").innerHTML = data;
+    })
+    .catch(error => console.error("Error al cargar el navbar:", error));
+});
+
+
 
