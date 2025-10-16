@@ -57,9 +57,20 @@ fetch('assets/js/noticias.json')
 
 // Script para carrusel de imagenes
 
-import { Carousel, initMDB } from "mdb-ui-kit";
+//import { Carousel, initMDB } from "mdb-ui-kit";
 
-initMDB({ Carousel });
+//initMDB({ Carousel });
+// Script para carrusel de imágenes (Bootstrap o MDB)
+document.addEventListener("DOMContentLoaded", function () {
+  const carouselElement = document.querySelector('#carouselExample');
+  if (carouselElement && typeof bootstrap !== "undefined") {
+    const carousel = new bootstrap.Carousel(carouselElement, {
+      interval: 3000,
+      ride: 'carousel'
+    });
+  }
+});
+
 
 // Script para NavBar unificado
 document.addEventListener("DOMContentLoaded", () => {
