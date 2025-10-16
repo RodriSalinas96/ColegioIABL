@@ -60,3 +60,19 @@ fetch('assets/js/noticias.json')
 import { Carousel, initMDB } from "mdb-ui-kit";
 
 initMDB({ Carousel });
+
+// Script para NavBar unificado
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    fetch("../../assets/js/script.js")
+      .then(response => {
+        if (!response.ok) throw new Error("No se pudo cargar el navbar");
+        return response.text();
+      })
+      .then(data => {
+        document.getElementById("navbar-container").innerHTML = data;
+      })
+      .catch(error => console.error(error));
+  });
+</script>
+
