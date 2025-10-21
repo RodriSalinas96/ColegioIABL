@@ -71,17 +71,39 @@ document.addEventListener("DOMContentLoaded", function () {
 // ===============================
 // Script para Navbar unificado
 // ===============================
-document.addEventListener("DOMContentLoaded", () => {
-  const navbarContainer = document.getElementById("navbar-container");
-  if (!navbarContainer) return;
+// --- Cargar el navbar dinámicamente ---
+fetch("navbar.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("navbar-container").innerHTML = data;
+    inicializarModoOscuro(); // ← Llamamos a la función una vez insertado el navbar
+  })
+  .catch(error => console.error("Error al cargar el navbar:", error));
 
-  fetch("navbar.html")
-    .then(response => {
-      if (!response.ok) throw new Error("No se pudo cargar el navbar");
-      return response.text();
-    })
-    .then(data => {
-      navbarContainer.innerHTML = data;
-    })
-    .catch(error => console.error("Error al cargar el navbar:", error));
-});
+// --- Función para activar modo oscuro ---
+function inicializarModoOscuro() {
+  const toggle = document.getElementById("modo-toggle");
+  if (!toggle) return; // seguridad
+
+  const body = document.body;
+
+  function actualizarBoton(oscuro) {
+    toggle.textContent = oscuro ? "☀️" : "🌙";
+    toggle.classList.remove("btn-outline-warning", "btn-outline-light");
+    toggle.classList.add(oscuro ? "btn-outline-warning" : "btn-outline-light");
+  }
+
+  // Cargar tema guardado
+  const temaGuardado = localStorage.getItem("tema");
+  const modoOscuroInicial = temaGuardado === "oscuro";
+  if (modoOscuroInicial) body.classList.add("dark-mode");
+  actualizarBoton(modoOscuroInicial);
+
+  // Evento click
+  toggle.addEventListener("click", () => {
+    const modoOscuro = body.classList.toggle("dark-mode");
+    localStorage.setItem("tema", modoOscuro ? "oscuro" : "claro");
+    actualizarBoton(modoOscuro);
+  });
+}
+
