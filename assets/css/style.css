@@ -26,6 +26,100 @@ body.dark-mode {
   --color-link-hover: #0dcaf0;
   --color-navbar-bg: rgba(20, 20, 20, 0.95);
 }
+/* ============================= */
+/*   🌙 MODO OSCURO GENERAL     */
+/* ============================= */
+
+body.dark-mode {
+  background-color: #121212 !important;
+  color: #f5f5f5 !important;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Textos generales */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+body.dark-mode p,
+body.dark-mode li {
+  color: #f5f5f5 !important;
+}
+
+/* Enlaces */
+body.dark-mode a {
+  color: #9ecbff;
+  transition: color 0.3s;
+}
+body.dark-mode a:hover {
+  color: #cce2ff;
+}
+
+/* Secciones claras alternadas (bg-light, blancas, etc.) */
+body.dark-mode section,
+body.dark-mode .bg-light,
+body.dark-mode .bg-white {
+  background-color: #1e1e1e !important;
+  color: #f5f5f5 !important;
+}
+
+/* Secciones sin clase de fondo */
+body.dark-mode #nosotros,
+body.dark-mode #mision-vision,
+body.dark-mode #contacto {
+  background-color: #1a1a1a !important;
+}
+
+/* Cards */
+body.dark-mode .card {
+  background-color: #222 !important;
+  border-color: #333 !important;
+  color: #f5f5f5 !important;
+}
+body.dark-mode .card-title {
+  color: #ffffff !important;
+}
+body.dark-mode .card-text {
+  color: #ddd !important;
+}
+
+/* Navbar */
+body.dark-mode .navbar {
+  background-color: #222 !important;
+  border-bottom: 1px solid #333 !important;
+}
+
+/* Footer */
+body.dark-mode footer {
+  background-color: #181818 !important;
+  color: #ccc !important;
+}
+body.dark-mode footer a {
+  color: #9ecbff !important;
+}
+body.dark-mode footer a:hover {
+  color: #cce2ff !important;
+}
+
+/* Carousel (para oscurecer un poco la zona inferior si el texto se superpone) */
+body.dark-mode .carousel-item img {
+  filter: brightness(0.85);
+}
+
+/* Botones claros */
+body.dark-mode .btn-light {
+  background-color: #333 !important;
+  color: #f5f5f5 !important;
+  border-color: #444 !important;
+}
+
+/* Transición suave en cambio de modo */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 
 /* =========================================================
     ESTILOS GENERALES
