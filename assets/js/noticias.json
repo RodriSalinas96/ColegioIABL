@@ -3,42 +3,42 @@
     "titulo": "Inicio de Clases 2025",
     "descripcion": "El año escolar comenzó con una ceremonia de bienvenida para todos los estudiantes.",
     "contenido": "El Colegio Industrial Andrés Bello López dio inicio oficial al año escolar 2025 con una ceremonia en el patio principal. La actividad contó con la participación de directivos, docentes, estudiantes y apoderados. Durante la jornada, se destacaron los logros del año anterior y se presentaron los nuevos desafíos académicos para este ciclo.",
-    "imagen": "assets/img/noticia1.jpg",
+    "imagen": "assets/img/noticias/noticia1.jpg",
     "fecha": "2025-03-01"
   },
   {
     "titulo": "Nuevo Laboratorio de Ciencias",
     "descripcion": "Se inauguró un moderno laboratorio de ciencias totalmente equipado.",
     "contenido": "Con una ceremonia encabezada por la Dirección del establecimiento, se inauguró el nuevo laboratorio de ciencias, equipado con instrumentos de última generación para biología, química y física. Este espacio permitirá a los estudiantes realizar experimentos prácticos y fomentar el aprendizaje científico de manera más cercana y aplicada.",
-    "imagen": "assets/img/noticia2.jpg",
+    "imagen": "assets/img/noticias/noticia2.jpg",
     "fecha": "2025-04-10"
   },
   {
     "titulo": "Campeonato Deportivo Escolar",
     "descripcion": "El colegio participó en el campeonato deportivo comunal con excelentes resultados.",
     "contenido": "El equipo de fútbol del Colegio Industrial Andrés Bello López obtuvo el segundo lugar en el campeonato comunal, mientras que la selección de atletismo logró varios podios en diferentes categorías. La comunidad educativa felicitó a los deportistas por su compromiso y esfuerzo.",
-    "imagen": "assets/img/noticia3.jpg",
+    "imagen": "assets/img/noticias/noticia3.jpg",
     "fecha": "2025-05-05"
   },
   {
     "titulo": "Feria Tecnológica Estudiantil",
     "descripcion": "Los estudiantes presentaron proyectos innovadores en la feria tecnológica anual.",
     "contenido": "Más de 30 proyectos fueron exhibidos en la Feria Tecnológica Estudiantil 2025. Entre ellos destacaron aplicaciones móviles creadas por los alumnos de informática, prototipos de energías renovables y robots construidos por el taller de mecánica. La actividad buscó fomentar la creatividad y el espíritu emprendedor.",
-    "imagen": "assets/img/noticia4.jpg",
+    "imagen": "assets/img/noticias/noticia4.jpg",
     "fecha": "2025-06-15"
   },
   {
     "titulo": "Charla Motivacional de Exalumno",
     "descripcion": "Un exalumno del colegio compartió su experiencia profesional con los estudiantes.",
     "contenido": "El ingeniero en telecomunicaciones, Pedro Rivas, exalumno de nuestra institución, visitó el colegio para dar una charla motivacional. Durante la actividad relató su experiencia en el mundo laboral, los desafíos que enfrentó y cómo los aprendizajes obtenidos en el establecimiento le ayudaron a alcanzar sus metas.",
-    "imagen": "assets/img/noticia5.jpg",
+    "imagen": "assets/img/noticias/noticia5.jpg",
     "fecha": "2020-07-08"
   },
   {
     "titulo": "Semana de la Convivencia Escolar",
     "descripcion": "Actividades y talleres para promover la sana convivencia se realizaron durante toda la semana.",
     "contenido": "Con obras de teatro, charlas, talleres y actividades deportivas, la comunidad escolar celebró la Semana de la Convivencia Escolar 2025. El objetivo fue reforzar valores como el respeto, la tolerancia y la inclusión entre estudiantes, profesores y apoderados.",
-    "imagen": "assets/img/noticia6.jpg",
+    "imagen": "assets/img/noticias/noticia6.jpg",
     "fecha": "2025-08-20"
   }
 ]

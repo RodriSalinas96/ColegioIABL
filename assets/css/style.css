@@ -152,6 +152,14 @@ h2 {
   color: var(--color-text);
 }
 
+.img-uniforme {
+  width: 100%;            /* ocupa todo el ancho del contenedor */
+  height: 220px;          /* altura fija (ajústala a tu gusto) */
+  object-fit: cover;      /* mantiene proporción, recorta si es necesario */
+  object-position: center;/* centra el recorte */
+}
+
+
 section {
   padding: 80px 0;
   scroll-margin-top: 80px;
